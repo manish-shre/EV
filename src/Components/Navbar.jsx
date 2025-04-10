@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6 md:px-20">
         {/* Logo */}
         <NavLink to="/" className="flex-shrink-0">
-          <img src={assets.logo} alt="logo" className="w-20 md:h-20" />
+          <img src={assets.logo} alt="logo" className="w-14 md:h-14" />
         </NavLink>
 
         {/* Desktop Navigation */}

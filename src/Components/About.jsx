@@ -5,7 +5,7 @@ import { assets } from "../assets/assets";
 
 const ExperienceSection = () => {
     return (
-        <section className="font-['Lexend_Deca'] text-center pb-30 bg-gray-50">
+        <section className="font-['Lexend_Deca'] text-center pb-30">
             {/* Section Header */}
             <p className="text-[#004C83] font-medium mb-4 tracking-wide">
                 — About Us

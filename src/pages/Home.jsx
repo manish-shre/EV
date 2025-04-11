@@ -13,10 +13,6 @@ export const Home = () => {
    <Product/>
    <Services/>
    <About/>
-
-   
-   
-   
   </>
   )
 }

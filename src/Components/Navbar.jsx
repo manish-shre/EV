@@ -19,6 +19,11 @@ const Navbar = () => {
     }
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "auto"; // Reset scrolling
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -131,13 +136,13 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-white z-40 flex flex-col justify-center items-center space-y-8 text-black text-xl font-semibold">
-          <button onClick={toggleMenu} className="absolute top-6 right-6 z-50">
+          <button onClick={closeMenu} className="absolute top-6 right-6 z-50">
             <X className="w-8 h-8" />
           </button>
 
           <NavLink
             to="/"
-            onClick={toggleMenu}
+            onClick={closeMenu}
             className={({ isActive }) =>
               `uppercase hover:text-blue-700 ${isActive ? "text-blue-500" : ""}`
             }
@@ -146,7 +151,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/Product"
-            onClick={toggleMenu}
+            onClick={closeMenu}
             className={({ isActive }) =>
               `uppercase hover:text-blue-700 ${isActive ? "text-blue-500" : ""}`
             }
@@ -155,7 +160,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/Company"
-            onClick={toggleMenu}
+            onClick={closeMenu}
             className={({ isActive }) =>
               `uppercase hover:text-blue-700 ${isActive ? "text-blue-500" : ""}`
             }
@@ -164,7 +169,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/Contact"
-            onClick={toggleMenu}
+            onClick={closeMenu}
             className={({ isActive }) =>
               `uppercase hover:text-blue-700 ${isActive ? "text-blue-500" : ""}`
             }

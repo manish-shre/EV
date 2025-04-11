@@ -88,15 +88,15 @@ const ExperienceSection = () => {
                     {/* Search Bar */}
                     <motion.div
                         whileHover={{ scale: 1.05 }}
-                        className="mt-3 inline-flex items-center gap-2 px-4 sm:px-2 py-3 border border-blue-600 text-blue-600 font-semibold rounded-[6px] hover:bg-blue-50 transition w-full max-w-[90%] sm:max-w-[800px]"
+                        className="mt-2 inline-flex items-center px-4 sm:px-2 py-3 border border-blue-600 text-blue-600 font-semibold rounded-[6px] hover:bg-blue-50 transition w-full max-w-[100%]"
                     >
-                        <button className="flex items-center justify-center w-8 sm:w-[60px] h-8 sm:h-10 text-blue-700">
+                        <button className="flex items-center justify-center w-[40%] sm:w-[60px] h-8 sm:h-10 text-blue-700">
                             <Search size={24} />
                         </button>
                         <input
                             type="text"
                             placeholder="Search for your EV"
-                            className="flex-grow px-2 py-2 border-none outline-none text-blue-600 text-[14px] sm:text-[16px]"
+                            className="flex-grow py-2 border-none outline-none text-blue-600 text-[14px] sm:text-[16px]"
                         />
                     </motion.div>
                 </motion.div>

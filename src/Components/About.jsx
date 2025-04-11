@@ -5,18 +5,18 @@ import { assets } from "../assets/assets";
 
 const ExperienceSection = () => {
     return (
-        <section className="font-['Lexend_Deca'] text-center pb-30">
+        <section className="font-['Lexend_Deca'] text-center pb-30 overflow-hidden">
             {/* Section Header */}
             <p className="text-[#004C83] font-medium mb-4 tracking-wide">
                 — About Us
             </p>
-            <div className="max-w-7xl mx-auto px-4 py-30 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-7xl mx-auto px-4 py-30 grid grid-cols-1 md:grid-cols-2 gap-12 items-center overflow-x-hidden">
                 {/* Left Column - Images */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative grid grid-cols-2 gap-4 items-end"
+                    className="relative grid grid-cols-2 gap-4 items-end w-full"
                 >
                     {/* Top Two Images */}
                     <div className="space-y-4">
@@ -42,7 +42,7 @@ const ExperienceSection = () => {
                     </div>
 
                     {/* Years of Experience */}
-                    <div className="absolute bottom-[-25px] left-0 md:left-[-20px] bg-white p-4 rounded-[6px] shadow-md w-60">
+                    <div className="absolute bottom-[-25px] left-0 md:left-[-20px] bg-white p-4 rounded-[6px] shadow-md w-full max-w-[240px]">
                         <h2 className="text-4xl sm:text-3xl font-bold text-blue-800">
                             20 <span className="text-base font-normal text-blue-700">YEARS</span>
                         </h2>
@@ -88,15 +88,15 @@ const ExperienceSection = () => {
                     {/* Search Bar */}
                     <motion.div
                         whileHover={{ scale: 1.05 }}
-                        className="mt-3 inline-flex items-center gap-2 px-4 sm:px-6 py-3 border border-blue-600 text-blue-600 font-semibold rounded-[6px] hover:bg-blue-50 transition w-full max-w-150"
+                        className="mt-3 inline-flex items-center gap-2 px-4 sm:px-2 py-3 border border-blue-600 text-blue-600 font-semibold rounded-[6px] hover:bg-blue-50 transition w-full max-w-[90%] sm:max-w-[800px]"
                     >
-                        <button className="flex items-center justify-center w-8 sm:w-10 h-8 sm:h-10 text-blue-700 ">
+                        <button className="flex items-center justify-center w-8 sm:w-[60px] h-8 sm:h-10 text-blue-700">
                             <Search size={24} />
                         </button>
                         <input
                             type="text"
                             placeholder="Search for your EV"
-                            className="flex-grow px-2  py-2 border-none outline-none text-blue-600 text-[14px] sm:text-[16px]"
+                            className="flex-grow px-2 py-2 border-none outline-none text-blue-600 text-[14px] sm:text-[16px]"
                         />
                     </motion.div>
                 </motion.div>
@@ -104,22 +104,21 @@ const ExperienceSection = () => {
 
             {/* Background Banner */}
             <div
-               className="relative bg-cover bg-center text-left text-white px-6 sm:px-12 py-50"
+                className="relative bg-cover bg-center text-left text-white px-6 sm:px-12 py-50"
                 style={{
                     backgroundImage: `url(${assets.bannerabout})`,
                 }}
             >
-                
-               <div className="max-w-4xl px-6 sm:px-12 lg:px-20">
-          <h1 className="text-[36px] sm:text-[48px] lg:text-[74px] font-bold leading-tight mb-6">
-          Charge the Future,<br /> Drive the Change
-          </h1>
-                <p className="text-[16px] sm:text-[18px] leading-relaxed">
-                With advanced fast EV chargers and robust production capabilities, we can greatly 
-                empower your business and give you the edge to stand out. Join us to drive your success 
-                with EVB charging solutions.
-        </p>
-            </div>
+                <div className="max-w-4xl px-6 sm:px-12 lg:px-20">
+                    <h1 className="text-[36px] sm:text-[48px] lg:text-[74px] font-bold leading-tight mb-6">
+                        Charge the Future,<br /> Drive the Change
+                    </h1>
+                    <p className="text-[16px] sm:text-[18px] leading-relaxed">
+                        With advanced fast EV chargers and robust production capabilities, we can greatly
+                        empower your business and give you the edge to stand out. Join us to drive your success
+                        with EVB charging solutions.
+                    </p>
+                </div>
             </div>
         </section>
     );

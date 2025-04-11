@@ -8,7 +8,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+
+    // Prevent scrolling when the mobile menu is open
+    if (!isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,12 +31,13 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "auto"; // Reset overflow on unmount
     };
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-10 font-sans transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 font-sans transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
@@ -111,8 +121,8 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger Menu (Mobile) */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu}>
+        <div className="md:hidden z-50 relative">
+          <button onClick={toggleMenu} className="z-50">
             {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8 text-blue-700" />}
           </button>
         </div>
@@ -120,8 +130,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col justify-center items-center space-y-8 text-black text-xl font-semibold">
-          <button onClick={toggleMenu} className="absolute top-6 right-6">
+        <div className="fixed top-0 left-0 w-full h-full bg-white z-40 flex flex-col justify-center items-center space-y-8 text-black text-xl font-semibold">
+          <button onClick={toggleMenu} className="absolute top-6 right-6 z-50">
             <X className="w-8 h-8" />
           </button>
 

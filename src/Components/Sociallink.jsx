@@ -18,7 +18,7 @@ const SocialLinks = ({ iconColor }) => {
           backgroundColor: "rgba(255, 255, 255, 0.1)",
         }}
         onMouseEnter={(e) =>
-          (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.4)")
+          (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.6)")
         }
         onMouseLeave={(e) =>
           (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)")
@@ -37,7 +37,7 @@ const SocialLinks = ({ iconColor }) => {
           backgroundColor: "rgba(255, 255, 255, 0.1)",
         }}
         onMouseEnter={(e) =>
-          (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.4)")
+          (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.6)")
         }
         onMouseLeave={(e) =>
           (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)")
@@ -56,7 +56,7 @@ const SocialLinks = ({ iconColor }) => {
           backgroundColor: "rgba(255, 255, 255, 0.1)",
         }}
         onMouseEnter={(e) =>
-          (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.4)")
+          (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.6)")
         }
         onMouseLeave={(e) =>
           (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)")

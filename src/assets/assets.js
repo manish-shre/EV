@@ -15,6 +15,7 @@ import aboutimg1 from './aboutimg1.png'
 import banner_product from './banner_product.png'
 import company1 from './company1.png'
 import company2 from './company2.png'
+import banner_company from './banner_company.png'
 
 
 
@@ -36,4 +37,5 @@ export const assets = {
   banner_product,
   company1,
   company2,
+  banner_company,
 };

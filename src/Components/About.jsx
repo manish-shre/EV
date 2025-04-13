@@ -104,20 +104,23 @@ const ExperienceSection = () => {
 
             {/* Background Banner */}
             <div
-                className="relative bg-cover bg-center text-left text-white px-6 sm:px-12 py-50"
+                className="relative bg-cover bg-center text-white px-4 sm:px-6 py-20 sm:py-40"
                 style={{
                     backgroundImage: `url(${assets.bannerabout})`,
                 }}
             >
-                <div className="max-w-4xl px-6 sm:px-12 lg:px-20">
-                    <h1 className="text-[36px] sm:text-[48px] lg:text-[74px] font-bold leading-tight mb-6">
-                        Charge the Future,<br /> Drive the Change
+
+
+                <div className="max-w-4xl mx-6 px-4 sm:px-12 lg:px-20">
+                    <h1 className="text-[28px] sm:text-[36px] lg:text-[74px] font-bold leading-tight mb-4 sm:mb-6 lg:text-left text-center">
+                        Charge the Future, <br /> Drive the Change
                     </h1>
-                    <p className="text-[16px] sm:text-[18px] leading-relaxed">
-                        With advanced fast EV chargers and robust production capabilities, we can greatly
-                        empower your business and give you the edge to stand out. Join us to drive your success
-                        with EVB charging solutions.
+                    <p className="text-[14px] sm:text-[16px] lg:text-[18px] leading-relaxed lg:text-left text-center">
+                        With advanced fast EV chargers and robust production capabilities, we can greatly empower your business and
+                        give you the edge to stand out. Join us to drive your success with EVB charging solutions.
                     </p>
+                </div>
+                <div>
                 </div>
             </div>
         </section>

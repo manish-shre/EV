@@ -5,10 +5,10 @@ const Companyservice = () => {
   return (
     <div className="bg-[#F8F8F8] py-25 font-['Lexend_Deca']">
       {/* Why Make EVB Section */}
-      <h2 className="text-[24px] md:text-[28px] font-medium text-center text-[#333333] mb-20">
+      <h2 className="text-[24px] md:text-[28px] font-medium text-center text-[#333333] mb-25">
         Why Make EVB Your EV Charging Solution Partner
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto px-6">
         {/* Innovation Card */}
         <div className="bg-white rounded-[15px] p-13 min-h-[300px] text-center">
           <div className="text-blue-600 text-4xl mb-6">

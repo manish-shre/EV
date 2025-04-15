@@ -13,7 +13,7 @@ import bannerabout from './bannerabout.png'
 import aboutimg from './aboutimg.png'
 import aboutimg1 from './aboutimg1.png'
 import banner_product from './banner_product.png'
-import company1 from './company1.png'
+import company1 from './company1.jpeg'
 import company2 from './company2.png'
 import banner_company from './banner_company.png'
 

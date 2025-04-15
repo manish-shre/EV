@@ -16,6 +16,15 @@ import banner_product from './banner_product.png'
 import company1 from './company1.jpeg'
 import company2 from './company2.png'
 import banner_company from './banner_company.png'
+import c1 from './c1.png'
+import c2 from './c2.png'
+import c3 from './c3.png'
+import c4 from './c4.png'
+import c5 from './c5.png'
+import c6 from './c6.png'
+import iconc1 from './iconc1.png'
+import iconc2 from './iconc2.png'
+import iconc3 from './iconc3.png'
 
 
 
@@ -38,4 +47,13 @@ export const assets = {
   company1,
   company2,
   banner_company,
+  iconc1,
+  iconc2,
+  iconc3,
+  c1,
+  c2,
+  c3,
+  c4,
+  c5,
+  c6,
 };

@@ -2,6 +2,8 @@ import { Breadcrumbs, Link, Typography } from '@mui/material';
 import React from 'react';
 import { assets } from '../assets/assets'; // Ensure this path is correct
 import Contentcompany from '../Components/Contentcompany';
+import Companycontent from '../Components/Companycontent';
+import Companyservice from '../Components/Companyservice';
 
 export const Company = () => {
   return (
@@ -52,15 +54,16 @@ export const Company = () => {
         </div>
       </div>
       <Contentcompany />
+      <Companycontent />
+      <Companyservice />
       {/* Background Banner */}
+      <div className='py-25'>
       <div
         className="relative bg-cover bg-center text-white px-4 sm:px-6 py-20 sm:py-40"
         style={{
           backgroundImage: `url(${assets.banner_company})`,
         }}
       >
-
-
         <div className="max-w-4xl mx-6 px-4 sm:px-12 lg:px-20">
           <h1 className="text-[28px] sm:text-[36px] lg:text-[74px] font-bold leading-tight mb-4 sm:mb-6 lg:text-left text-center">
             Accelerate Your<br /> Business Growth
@@ -73,7 +76,9 @@ export const Company = () => {
         </div>
         <div>
         </div>
+        </div>
       </div>
+    
 
     </>
   );

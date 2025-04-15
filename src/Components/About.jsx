@@ -5,12 +5,12 @@ import { assets } from "../assets/assets";
 
 const ExperienceSection = () => {
     return (
-        <section className="font-['Lexend_Deca'] text-center pb-30 overflow-hidden">
+        <section className="font-['Lexend_Deca'] text-center pb-25 overflow-hidden">
             {/* Section Header */}
             <p className="text-[#004C83] font-medium mb-4 tracking-wide">
                 — About Us
             </p>
-            <div className="max-w-7xl mx-auto px-4 py-30 grid grid-cols-1 md:grid-cols-2 gap-12 items-center overflow-x-hidden">
+            <div className="max-w-7xl mx-auto px-4 py-25 grid grid-cols-1 md:grid-cols-2 gap-12 items-center overflow-x-hidden">
                 {/* Left Column - Images */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}

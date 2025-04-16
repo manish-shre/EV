@@ -133,7 +133,7 @@ const Navbar = () => {
             aria-label="Toggle mobile menu"
           >
             {isOpen ? (
-              <X className={`w-8 h-8 ${isScrolled ? "text-blue-900" : "text-white"}`} />
+              <X className={`w-8 h-8 ${isScrolled ? "text-blue-900" : "text-blue-800"}`} />
             ) : (
               <Menu className={`w-8 h-8 ${isScrolled ? "text-blue-900" : "text-white"}`} />
             )}

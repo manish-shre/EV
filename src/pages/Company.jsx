@@ -14,8 +14,8 @@ export const Company = () => {
         style={{ backgroundImage: "url('/banner_company.png')" }}
         id="Header"
       >
-        <div className="absolute inset-4 flex flex-col justify-center px-4 sm:px-8 lg:px-43 mt-20">
-          <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold text-left mb-22">
+        <div className="absolute inset-4 flex flex-col justify-center px-4 sm:px-8 lg:px-43 mt-25">
+          <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold text-left mb-12">
             Company
           </h1>
           <Breadcrumbs

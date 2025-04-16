@@ -6,7 +6,7 @@ export const Contact = () => {
     <>
       {/* Banner Section */}
       <div className="relative w-full h-[250px] sm:h-[400px] md:h-[400px] lg:h-[350px] bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: "url('/banner_product.png')" }}
+        style={{ backgroundImage: "url('/contact.jpg')" }}
         id="Header"
       >
         <div className="absolute inset-4 flex flex-col justify-center px-4 sm:px-8 lg:px-43 mt-20">

@@ -1,5 +1,6 @@
 import React from 'react';
-import { assets } from '../assets/assets'; // Ensure this path is correct
+import { assets } from '../assets/assets'; 
+import { Link } from "react-router-dom";
 
 const Contentcompany = () => {
   return (
@@ -29,9 +30,11 @@ const Contentcompany = () => {
                 is to empower individuals and organizations to utilize renewable
                 energy for a more sustainable future.
               </p>
-              <button className="bg-[#007FDB] hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-[8px]">
-                Contact Us
-              </button>
+              <Link to="/contact">
+                <button className="bg-[#007FDB] hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-[8px]">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Simage from "./Simage"; //
 
 const HeroSection = () => {
   return (
-    <section className="font-['Lexend_Deca'] text-center pb-30">
+    <section className="font-['Lexend_Deca'] text-center py-15 md:py-12 ">
       <p className="text-[#004C83] font-medium mb-12">— Our Services</p>
       <h2 className="text-[28px] font-semi-bold mb-12 text-gray-800">
         Global-Leading EV Charging Solution Provider

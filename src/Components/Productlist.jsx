@@ -41,7 +41,7 @@ const products = [
 
 const EVProductSlider = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-30 text-center font-['Lexend_Deca']">
+    <section className="max-w-7xl mx-auto px-4 py-15 md:py-25 text-center font-['Lexend_Deca']">
       <p className="text-[#004C83] font-medium mb-12">— Our Product</p>
       <h2 className="text-[28px] font-semi-bold mb-12 text-gray-800">
         EVB EV Charging Series

@@ -3,11 +3,11 @@ import { assets } from "../assets/assets";
 
 const Companycontent = () => {
     return (
-        <div className="py-25 px-6 md:px-12 lg:px-24">
-            <h2 className="text-[24px] md:text-[28px] font-medium text-center text-[#333333] mb-6">
+        <div className="px-4 md:px-12  mb-25 mt-8"  >
+            <h2 className="text-[24px] md:text-[28px] font-medium text-center text-[#333333] mb-4">
                 GLOBAL MARKET REACH
             </h2>
-            <p className="text-center max-w-5xl mx-auto text-[#292929] opacity-60 text-base md:text-lg mb-6">
+            <p className="text-center max-w-5xl mx-auto text-[#292929] opacity-60 text-base md:text-lg mb-4">
                 As a Chinese EV charger company with a global presence, EVB empowers the success of numerous battery storage and EV
                 charging system projects across Australia, Germany, France, Poland, the UK, the USA, Brazil, South Africa, the Philippines,
                 Thailand, Middle East Countries, and much more.

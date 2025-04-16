@@ -3,9 +3,9 @@ import { assets } from "../assets/assets";
 
 const Companyservice = () => {
   return (
-    <div className="bg-[#F8F8F8] py-25 font-['Lexend_Deca']">
+    <div className="bg-[#F8F8F8]  font-['Lexend_Deca'] py-15">
       {/* Why Make EVB Section */}
-      <h2 className="text-[24px] md:text-[28px] font-medium text-center text-[#333333] mb-25">
+      <h2 className="text-[24px] md:text-[28px] font-medium text-center text-[#333333] mb-15 ">
         Why Make EVB Your EV Charging Solution Partner
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto px-6">

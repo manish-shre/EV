@@ -46,7 +46,7 @@ export const Product = () => {
   return (
     <>
       <Productbanner />
-      <section className="max-w-7xl mx-auto px-4 py-30 text-center font-['Lexend_Deca']">
+      <section className="max-w-7xl mx-auto px-4 py-15 md:py-25 text-center font-['Lexend_Deca']">
         <h2 className="text-[28px] font-semi-bold mb-12 text-gray-800">
           DC EV Charging Series
         </h2>

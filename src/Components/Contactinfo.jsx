@@ -2,7 +2,7 @@ import React from "react";
 
 const Contactinfo = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center gap-10 p-6 md:p-12 md:px-45 md:py-25">
+    <div className="flex flex-col md:flex-row justify-between items-center gap-10 p-6 md:p-12 md:px-45 py-15 md:py-25 ">
       {/* Left Content */}
       <div className="w-full md:w-[50%] space-y-6">
         <h2 className="text-[24px] md:text-[28px] font-medium text-[#333333]">

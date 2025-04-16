@@ -6,7 +6,7 @@ const Contentcompany = () => {
   return (
     <>
       {/* Content Section */}
-      <div className="text-[#333333] px-4 sm:px-8 lg:px-16 py-25 pb-12 sm:pb-16">
+      <div className="text-[#333333] px-4 sm:px-8 mt-10 md:py-15 ">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 items-center">
           <div className="w-full flex justify-center">

@@ -1,6 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'; // Ensure this path is correct
 import { Breadcrumbs, Link, Typography } from '@mui/material';
+import Contactinfo from '../Components/Contactinfo';
 export const Contact = () => {
   return (
     <>
@@ -48,6 +49,7 @@ export const Contact = () => {
           </Breadcrumbs>
         </div>
       </div>
+      <Contactinfo/>
     </>
   )
 }

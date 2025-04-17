@@ -13,7 +13,7 @@ export const Product = () => {
     },
     {
       id: 22,
-      title: "Floor Mounted 2 Guns DC EV Charger",
+      title: " Mounted 2 Guns DC EV Charger",
       desc: "Compact and efficient wall-mounted DC EV charger with power range from 22kW to 50kW.",
       image: assets.product2,
     },
@@ -58,14 +58,14 @@ export const Product = () => {
               key={product.id}
               className="bg-white p-8 rounded-2xl shadow-md text-left h-full"
             >
-              <Link to={`/product/${product.id}`} className="block">
+              <Link to={`/Productdetail/${product.id}`} className="block">
                 <img
                   src={product.image}
                   alt={product.title}
                   className="w-full h-72 object-contain mb-6 transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-lg"
                 />
               </Link>
-              <Link to={`/product/${product.id}`} className="block">
+              <Link to={`/Productdetail/${product.id}`} className="block">
                 <h3 className="text-[22px] font-semi-bold text-gray-800 mb-3 hover:text-[#007FDB] overflow-hidden">
                   {product.title}
                 </h3>
@@ -73,12 +73,12 @@ export const Product = () => {
               <p className="text-[18px] text-[#292929] opacity-60 mb-4">
                 {product.desc}
               </p>
-              <a
-                href={`/product/${product.id}`}
+              <Link
+                to={`/Productdetail/${product.id}`}
                 className="text-[#007FDB] font-medium inline-flex items-center hover:text-[#333333]"
               >
                 Learn More <span className="ml-2">→</span>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

@@ -25,7 +25,15 @@ import c6 from './c6.png'
 import iconc1 from './iconc1.png'
 import iconc2 from './iconc2.png'
 import iconc3 from './iconc3.png'
-
+import certificate1 from './certificate1.png'
+import certificate2 from './certificate2.png'
+import certificate3 from './certificate3.png'
+import certificate4 from './certificate4.png'
+import certificate5 from './certificate5.png'
+import productdes1 from './productdes1.png'
+import productdes2 from './productdes2.png'
+import productdes3 from './productdes3.png'
+import productdes4 from './productdes4.png'
 
 
 export const assets = {
@@ -56,5 +64,15 @@ export const assets = {
   c4,
   c5,
   c6,
+  certificate1,
+  certificate2,
+  certificate3,
+  certificate4,
+  certificate5,
+ productdes1,
+ productdes2,
+ productdes3,
+ productdes4,
+  
 
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import ProductShowcase from "../Components/Productshowcase";
+import { Link as RouterLink } from 'react-router-dom';
 
 export const Productdetail = () => {
   // Static product data
@@ -32,7 +33,8 @@ export const Productdetail = () => {
                 >
                   <Link
                     underline="hover"
-                    href="/"
+                    to="/"
+                    component={RouterLink}
                     sx={{
                       color: "white",
                       fontSize: "16px",
@@ -47,14 +49,15 @@ export const Productdetail = () => {
                   </Link>
                   <Link
                     underline="hover"
-                    href="/product"
+                    to="/Product"
+                    component={RouterLink}
                     sx={{
                       color: "white",
                       fontSize: "16px",
                       fontWeight: "600",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color: "#dddddd", // Tailwind's gray-700 equivalent
+                        color: "#dddddd",
                       },
                     }}
                   >

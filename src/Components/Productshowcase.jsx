@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { assets } from '../assets/assets';
 import Chargingpower from './Chargingpower';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
+import Contentcompany from './Contentcompany';
 
 const ProductShowcase = () => {
   const [selectedImage, setSelectedImage] = useState(assets.productdes1);
@@ -45,92 +47,94 @@ const ProductShowcase = () => {
 
   return (
     <div className="flex flex-col md:flex-row max-w-[95%] md:max-w-[75%] mx-auto font-['Lexend_Deca'] py-15 md:py-25">
-      {/* Left Thumbnail Images - Added mobile spacing */}
-      <div className="flex flex-col items-center space-y-12 mb-6 md:mb-0">
-        {/* Up Arrow */}
-        <motion.button
-          whileHover={{ scale: 1.2, y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={scrollUp}
-          className={`p-2 rounded-full bg-gray-100 hover:bg-blue-50 ${
-            startIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:text-blue-600'
-          }`}
-          disabled={startIndex === 0}
-        >
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            className="h-6 w-6 rotate-180" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
+      {/* Left Thumbnail Images - Modified for mobile */}
+      <div className="flex flex-col md:flex-col items-center">
+        {/* Navigation Arrows - Mobile (Left/Right) & Desktop (Up/Down) */}
+        <div className="flex md:flex-col items-center w-full justify-between md:justify-center space-y-0 md:space-y-12">
+          {/* Left/Up Arrow */}
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={scrollUp}
+            className={`p-2 rounded-full bg-gray-100 hover:bg-blue-50 
+              ${startIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:text-blue-600'}
+              transform md:rotate-180`} // Only rotate on desktop
+            disabled={startIndex === 0}
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M19 9l-7 7-7-7" 
-            />
-          </svg>
-        </motion.button>
-
-        {/* Thumbnails - Adjusted for mobile */}
-        <div className="space-y-4 flex flex-row md:flex-col gap-6 md:gap-0 md:space-y-4 overflow-x-auto md:overflow-x-visible">
-          {thumbnails.slice(startIndex, startIndex + visibleCount).map((src, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3, delay: idx * 0.1 }}
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-6 w-6 rotate-90 md:rotate-180" // Rotate for left arrow on mobile, up arrow on desktop
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
             >
-              <motion.img
-                src={src}
-                alt={`Thumbnail ${idx + 1}`}
-                onClick={() => handleImageChange(src)}
-                whileHover={{ 
-                  scale: 1.1,
-                  boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                className={`
-                  w-20 md:w-30 h-20 md:h-24 object-contain cursor-pointer rounded-md
-                  transition-all duration-300
-                  ${selectedImage === src 
-                    ? 'border-2 border-[#004C83] shadow-lg' 
-                    : 'border border-transparent hover:border-gray-300'
-                  }
-                `}
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M19 9l-7 7-7-7" 
               />
-            </motion.div>
-          ))}
-        </div>
+            </svg>
+          </motion.button>
 
-        {/* Down Arrow */}
-        <motion.button
-          whileHover={{ scale: 1.2, y: 2 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={scrollDown}
-          className={`p-2 rounded-full bg-gray-100 hover:bg-blue-50 ${
-            startIndex + visibleCount >= thumbnails.length 
-              ? 'opacity-50 cursor-not-allowed' 
-              : 'hover:text-blue-600'
-          }`}
-          disabled={startIndex + visibleCount >= thumbnails.length}
-        >
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            className="h-6 w-6" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
+          {/* Thumbnails - Horizontal on mobile, vertical on desktop */}
+          <div className="flex md:flex-col gap-3 md:gap-0 md:space-y-4 overflow-x-auto md:overflow-x-visible">
+            {thumbnails.slice(startIndex, startIndex + visibleCount).map((src, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: idx * 0.1 }}
+              >
+                <motion.img
+                  src={src}
+                  alt={`Thumbnail ${idx + 1}`}
+                  onClick={() => handleImageChange(src)}
+                  whileHover={{ 
+                    scale: 1.1,
+                    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`
+                    w-20 md:w-30 h-20 md:h-24 object-contain cursor-pointer rounded-md
+                    transition-all duration-300
+                    ${selectedImage === src 
+                      ? 'border-2 border-[#004C83] shadow-lg' 
+                      : 'border border-transparent hover:border-gray-300'
+                    }
+                  `}
+                />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Right/Down Arrow */}
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={scrollDown}
+            className={`p-2 rounded-full bg-gray-100 hover:bg-blue-50 
+              ${startIndex + visibleCount >= thumbnails.length 
+                ? 'opacity-50 cursor-not-allowed' 
+                : 'hover:text-blue-600'}`}
+            disabled={startIndex + visibleCount >= thumbnails.length}
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M19 9l-7 7-7-7" 
-            />
-          </svg>
-        </motion.button>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-6 w-6 -rotate-90 md:rotate-0" // Rotate for right arrow on mobile, down arrow on desktop
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M19 9l-7 7-7-7" 
+              />
+            </svg>
+          </motion.button>
+        </div>
       </div>
 
       {/* Main Product Content - Improved mobile layout */}
@@ -206,7 +210,10 @@ const ProductShowcase = () => {
           </div>
         </div>
       </div>
+      
     </div>
+  
+
   );
 };
 

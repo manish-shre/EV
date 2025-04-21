@@ -16,40 +16,75 @@ const ExperienceSection = () => {
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative grid grid-cols-2 gap-4 items-end w-full"
+                    className="relative w-full h-[550px] overflow-hidden"
                 >
-                    {/* Top Two Images */}
-                    <div className="space-y-4">
+                    {/* Background Shapes */}
+                    <div className="absolute top-0 right-0 w-[70%] h-[70%] bg-gradient-to-br from-blue-50 to-blue-100 rounded-[30px] transform rotate-3"></div>
+                    <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-gradient-to-tr from-blue-100 to-blue-50 rounded-[20px] transform -rotate-3"></div>
+
+                    {/* Main Image - Center */}
+                    <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute top-[10%] left-[25%] w-[50%] h-[50%] group z-10"
+                    >
+                        <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                         <img
                             src={assets.aboutimg}
                             alt="Charger 1"
-                            className="rounded-xl shadow-lg w-full hover:scale-105 transition-transform duration-300"
+                            className="relative rounded-xl shadow-lg w-full h-full object-cover transform transition duration-500 group-hover:scale-105"
                         />
+                    </motion.div>
+
+                    {/* Left Image - Angled */}
+                    <motion.div
+                        whileHover={{ scale: 1.05, rotate: -3 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute top-[30%] left-0 w-[35%] h-[35%] group"
+                    >
+                        <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                         <img
                             src={assets.aboutimg1}
                             alt="Charger 2"
-                            className="rounded-xl shadow-lg w-full hover:scale-105 transition-transform duration-300"
+                            className="relative rounded-xl shadow-lg w-full h-full object-cover transform transition duration-500 group-hover:scale-105"
                         />
-                    </div>
+                    </motion.div>
 
-                    {/* Single Large Image */}
-                    <div className="row-span-2">
+                    {/* Right Image - Angled */}
+                    <motion.div
+                        whileHover={{ scale: 1.05, rotate: 3 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute bottom-[10%] right-[5%] w-[35%] h-[35%] group"
+                    >
+                        <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                         <img
                             src={assets.aboutimg}
                             alt="Charger 3"
-                            className="rounded-xl shadow-lg w-full hover:scale-105 transition-transform duration-300"
+                            className="relative rounded-xl shadow-lg w-full h-full object-cover transform transition duration-500 group-hover:scale-105"
                         />
-                    </div>
+                    </motion.div>
 
-                    {/* Years of Experience */}
-                    <div className="absolute bottom-[-25px] left-0 md:left-[-20px] bg-white p-4 rounded-[6px] shadow-md w-full max-w-[240px]">
-                        <h2 className="text-4xl sm:text-3xl font-bold text-blue-800">
-                            20 <span className="text-base font-normal text-blue-700">YEARS</span>
-                        </h2>
-                        <p className="uppercase text-xs sm:text-sm text-blue-600 tracking-wide">
-                            Of Experiences
-                        </p>
-                    </div>
+                    {/* Years of Experience - Floating Card */}
+                    {/* <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="absolute bottom-[5%] left-[35%] bg-white p-6 rounded-[12px] shadow-xl w-full max-w-[280px] group hover:shadow-2xl transition-all duration-300 z-20"
+                    >
+                        <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                        <div className="relative">
+                            <h2 className="text-5xl sm:text-4xl font-bold text-blue-800">
+                                20 <span className="text-base font-normal text-blue-700">YEARS</span>
+                            </h2>
+                            <p className="uppercase text-xs sm:text-sm text-blue-600 tracking-wider mt-2">
+                                Of Experiences
+                            </p>
+                        </div>
+                    </motion.div> */}
+
+                    {/* Decorative Elements */}
+                    <div className="absolute top-[15%] right-[15%] w-6 h-6 bg-blue-400 rounded-full opacity-50"></div>
+                    <div className="absolute bottom-[25%] left-[15%] w-4 h-4 bg-blue-300 rounded-full opacity-30"></div>
                 </motion.div>
 
                 {/* Right Column - Text Content */}

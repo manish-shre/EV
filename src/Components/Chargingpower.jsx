@@ -73,9 +73,9 @@ const Chargingpower = () => {
     return (
         <div className="container mx-auto ">
             <div className="flex flex-col lg:flex-row">
-                <div className="w-full lg:w-1/2 space-y-6">
+                <div className="w-full lg:w-1/2 space-y-4">
                     <div className="space-y-0">
-                        <p className="text-[18px] font-medium mb-2 text-[#004C83]">
+                        <p className="text-lg sm:text-xl font-medium mb-2 text-[#004C83]">
                             Charging Power
                         </p>
                         <AnimatePresence mode="wait">
@@ -104,7 +104,7 @@ const Chargingpower = () => {
                     </div>
 
                     {/* Power Options - Enhanced UI and Responsiveness */}
-                    <div className="space-y-6">
+                    <div className="space-y-0">
                         <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 sm:w-[500px]">
                             {Object.keys(powerData).map((power) => (
                                 <motion.button
@@ -152,7 +152,7 @@ const Chargingpower = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="bg-gray-50 rounded-lg p-4 mt-0"
+                        className="bg-gray-50 rounded-lg p-0 mt-0"
                     >
                     </motion.div>
                 </div>

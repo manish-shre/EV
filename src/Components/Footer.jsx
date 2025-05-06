@@ -72,7 +72,7 @@ const Footer = () => {
     <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
       {/* Left section: Copyright */}
       <p className="text-[#333333] text-[18px] font-medium sm:text-left sm:flex-1">
-        © 2024 VOTTH. All rights reserved.
+        © 2024 VOITH. All rights reserved.
       </p>
 
 

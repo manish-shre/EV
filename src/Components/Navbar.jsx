@@ -46,14 +46,14 @@ const Navbar = () => {
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-5 px-6 md:px-12 md:mx-60">
+      <div className="container mx-auto flex items-center justify-between py-5 px-4 sm:px-6 lg:px-8 max-w-[1440px]">
         {/* Logo */}
         <NavLink to="/" className="flex-shrink-0">
           <img src={assets.logo} alt="logo" className="w-16 md:h-16" />
         </NavLink>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-12 text-[16px] font-semibold">
+        <ul className="hidden md:flex gap-12 text-[16px] font-semibold absolute left-1/2 transform -translate-x-1/2">
           <NavLink
             to="/"
             className={({ isActive }) =>
